@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <td>#</td>
+            <td>ФИО</td>
+            <td>Город</td>
+            <td>Специальность</td>
+            <td>Квалификация</td>
+            <td>Стоимость</td>
+            <td>Контакт</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Петро Петренко</td>
+            <td>Харків</td>
+            <td>frontEnd</td>
+            <td>junior</td>
+            <td>7</td>
+            <td>petro@gmail.com</td>
+            <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal1">Редагувати</button>
+            </td>
+            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal2">X</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Іванко Куций</td>
+            <td>Київ</td>
+            <td>FE</td>
+            <td>Senior</td>
+            <td>30</td>
+            <td>ivanko</td>
+            <td><button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal1">
+                Редагувати
+            </button></td>
+            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal2">
+               X
+            </button></td>
+        </tr>
+
+    </table>
+    <div class="align-content-end d-flex flex-row-reverse">
+      <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Додати запис
+    </button>    
+    </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Додати спеціаліста</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div><label for="fio">ПІБ</label><input type="text" name = "fio" id = "fio"></div>
+            <div><label for="city">Місто</label><input type="text" name = "city" id = "city"></div>
+            <div><label for="job">Спеціальність</label><input type="text" name = "job" id = "job"></div>
+            <div><label for="qualification">Кваліфікація</label><input type="text" name = "qualification" id = "qualification"></div>
+            <div><label for="timerate">Вартість</label><input type="text" name = "timerate" id = "timerate"></div>
+            <div><label for="contact">Контакт</label><input type="text" name = "contact" id = "contact"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div><label for="fio">ПІБ</label><input type="text" name = "fio" id = "fio" value="Петро Петренко"></div>
+                <div><label for="city">Місто</label><input type="text" name = "city" id = "city" value="Харків"></div>
+                <div><label for="job">Спеціальність</label><input type="text" name = "job" id = "job" value="frontEnd"></div>
+                <div><label for="qualification">Кваліфікація</label><input type="text" name = "qualification" id = "qualification" value="junior"></div>
+                <div><label for="timerate">Вартість</label><input type="text" name = "timerate" id = "timerate" value="7"></div>
+                <div><label for="contact">Контакт</label><input type="text" name = "contact" id = "contact" value="petro@gmail.com"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+              <button type="button" class="btn btn-primary">Зберегти</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Modal -->
+       <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Точно видалити?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+              <button type="button" class="btn btn-danger">Видалити</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="align-content-end d-flex flex-row-reverse mt-5">
+        <a href="stat.html" class="btn btn-secondary btn-lg " tabindex="-1" role="button" aria-disabled="true">Статистика</a>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
